@@ -1,12 +1,12 @@
 /*
-Десять квадратов.
-По алгоритму данной программы робот едет по траектории квадратной формы 10 раз
+Ten squares.
+The robot drives square trajectory ten times
 */
-#define MOVE_TIME 500 // Время движения вперёд
-#define TURN_TIME 360 // Время, в течение которого робот поворачивает
+#define MOVE_TIME 500 // Time to move foward
+#define TURN_TIME 360 // Time for robot turning
 task main()
 {
-  repeat(10) // Объявляем цикл, повторяющий действия 10 раз
+  repeat(10) // repeat squares 10 times
   {
     repeat(4)
     {
@@ -16,5 +16,5 @@ task main()
       Wait(TURN_TIME);
     }
   }
-  Off(OUT_AC); // Выключаем моторы
+  Off(OUT_AC); // Turn motors off
 }
