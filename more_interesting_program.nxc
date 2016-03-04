@@ -1,8 +1,10 @@
+#define MOVE_TIME 500
+#define TURN_TIME 360
 task main()
 {
   OnFwd(OUT_AC, 75);
-  Wait(500);
+  Wait(MOVE_TIME);
   OnRev(OUT_C, 75);
-  Wait(360);
+  Wait(TURN_TIME);
   Off(OUT_AC);
 }
