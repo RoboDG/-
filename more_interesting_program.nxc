@@ -2,12 +2,15 @@
 #define TURN_TIME 360
 task main()
 {
-  repeat(4)
+  repeat(10)
   {
-    OnFwd(OUT_AC, 75);
-    Wait(MOVE_TIME);
-    OnRev(OUT_C, 75);
-    Wait(TURN_TIME);
+    repeat(4)
+    {
+      OnFwd(OUT_AC, 75);
+      Wait(MOVE_TIME);
+      OnRev(OUT_C, 75);
+      Wait(TURN_TIME);
+    }
   }
   Off(OUT_AC);
 }
