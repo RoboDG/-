@@ -10,6 +10,7 @@ void printBuildVersion();
 
 task main()
 {
+  printBuildVersion(); // Наконец-то мы решили выводить дату прошивки прямо перед запуском робота
   repeat(10) // repeat squares 10 times
   {
     repeat(4)
