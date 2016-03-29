@@ -27,5 +27,6 @@ task main()
 void printBuildVersion(){ // Эта функция печатает дату прошивки
   TextOut(10,50,__DATE__);
   Wait(1000);
+  ClearScreen();
 }
 
