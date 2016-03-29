@@ -22,9 +22,12 @@ task main()
     }
   }
   Off(OUT_AC); // Turn motors off
+  printBuildVersion(); // Пусть версия показывается и после работы программы.
 }
 
 void printBuildVersion(){ // Эта функция печатает дату прошивки
   TextOut(10,50,__DATE__);
+  Wait(1000);
+  ClearScreen();
 }
 
