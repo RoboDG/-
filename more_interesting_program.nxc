@@ -1,4 +1,3 @@
-
 /*
 Ten squares.
 The robot drives square trajectory ten times
@@ -7,24 +6,29 @@ The robot drives square trajectory ten times
 #define TURN_TIME 360 // Time for robot turning
 
 void printBuildVersion();
+void goSquare();
 
 task main()
 {
   printBuildVersion(); // Наконец-то мы решили выводить дату прошивки прямо перед запуском робота
   repeat(10) // repeat squares 10 times
   {
-    repeat(4)
-    {
-      OnFwd(OUT_AC, 75);
-      Wait(MOVE_TIME);
-      OnRev(OUT_C, 75);
-      Wait(TURN_TIME);
-    }
+    goSquare();
   }
   Off(OUT_AC); // Turn motors off
   printBuildVersion(); // Пусть версия показывается и после работы программы.
 }
-
+void goSquare()
+{
+    repeat(4)
+    {
+      OnFwd(OUT_AC, 60);
+      Wait(MOVE_TIME);
+      Off(OUT_AC);
+      OnRev(OUT_C, 60);
+      Wait(TURN_TIME);
+    }
+}
 void printBuildVersion(){ // Эта функция печатает дату прошивки
   TextOut(10,50,__DATE__);
   Wait(1000);
