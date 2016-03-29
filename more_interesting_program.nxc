@@ -31,7 +31,7 @@ void goSquare()
 }
 void printBuildVersion(){ // Эта функция печатает дату прошивки
   TextOut(10,50,__DATE__);
-  Wait(1000);
+  Wait(3000);
   ClearScreen();
 }
 
