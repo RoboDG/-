@@ -15,9 +15,9 @@ task main()
   {
     repeat(4)
     {
-      OnFwd(OUT_AC, 75);
+      OnFwd(OUT_AC, 60);
       Wait(MOVE_TIME);
-      OnRev(OUT_C, 75);
+      OnRev(OUT_C, 60);
       Wait(TURN_TIME);
     }
   }
